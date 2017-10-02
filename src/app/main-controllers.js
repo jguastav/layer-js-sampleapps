@@ -162,12 +162,22 @@ sampleControllers.controller('chatCtrl', function ($scope, $location) {
   };
 
   $scope.onMessageNotification = function(evt) {
+    console.log("onMessageNotification");
+    $scope.playSound();
     if ((!$scope.chatCtrlState.currentConversation ||
         evt.detail.item.conversationId === $scope.chatCtrlState.currentConversation.id) &&
         !evt.detail.isBackground) {
       evt.preventDefault();
     }
   };
+
+  $scope.playSound = function() {
+      console.log("playSound");
+      var audio = new Audio('sounds/beep.wav');
+      audio.play();
+  };
+
+
 
   $scope.onNotificationClick = function(evt) {
     var message = evt.detail.item;

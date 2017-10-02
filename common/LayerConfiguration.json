@@ -1,5 +1,7 @@
-[{
-  "name":"",
-  "app_id":"",
-  "identity_provider_url":""
-}]
+[
+	{
+		"name": "layer-chat-plref",
+		"app_id": "layer:///apps/staging/2f99a144-a63f-11e7-a32b-23bbeb571ff8",
+		"identity_provider_url": "https://first-chat-layer.herokuapp.com/"
+	}
+]
